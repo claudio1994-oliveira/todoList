@@ -27,7 +27,7 @@
 
             </div>
 
-            <button class="clear" @click="removeTodo()">Limpar tudo</button>
+            <button v-if="todos.length > 0" class="clear" @click="removeTodo()">Limpar tudo</button>
 
             <input type="text" placeholder="Escreva uma nova tarefa..." v-model="newTodo.text">
             <button class="add" @click="addTodo()">Adicionar</button>
